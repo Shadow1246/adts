@@ -10,10 +10,40 @@ class List::Node //self-referential Node class
 	public:
 	   int data = 0;
 	   Node* link = nullptr;
+
+	  Node()
+	     {	
+		data=0;
+		link=nullptr;
+	     }
+
+	  Node (int new-data)
+	     {
+		data =new-data;
+		link = nullptr;
+	     }
+
+	  Node (int new-data,Node* new-link)
+	     {
+  	 	data =new-data;
+		link =new-link;
+	     }
+  
+ 
+		
 	   //link is a data member which is a pointer 
 	   //to an object of the same type (i.e. Node)
 	
 	};//end Node class definition (can only be seen by the List class)
+
+
+List::List()
+	{
+		frontptr = nullptr;
+		num_elements=0;
+	}
+
+
 
 
 List::~List()
